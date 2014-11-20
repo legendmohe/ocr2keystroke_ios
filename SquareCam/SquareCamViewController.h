@@ -46,33 +46,38 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#import <TesseractOCR/TesseractOCR.h>
+#import "Tesseract.h"
+#import "GPUImage.h"
 
-
-
-@class CIDetector;
-
-@interface SquareCamViewController : UIViewController <UIAlertViewDelegate, UIGestureRecognizerDelegate, TesseractDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface SquareCamViewController : UIViewController <UIAlertViewDelegate>
 {
-	IBOutlet UIView *previewView;
-	AVCaptureVideoPreviewLayer *previewLayer;
-	AVCaptureVideoDataOutput *videoDataOutput;
-	dispatch_queue_t videoDataOutputQueue;
     
-    IBOutlet UILabel *OCRResultLabel;
-    IBOutlet UIView *OCRFocusView;
-    IBOutlet UIImageView *TextImageView;
-    __weak IBOutlet UIBarButtonItem *sendBarButtonItem;
+    GPUImageVideoCamera *videoCamera;
+    GPUImageOutput<GPUImageInput> *filter;
+    GPUImageCropFilter* cropFilter;
+    GPUImageCropFilter* previewFilter;
+    GPUImageAdaptiveThresholdFilter* adaptiveThresholdFilter;
+    GPUImageMedianFilter* medianFilter;
+    
+    Tesseract *tesseract;
+    
+    __weak IBOutlet UILabel *OCRResultLabel;
+    __weak IBOutlet UIView *OCRFocusView;
+    __weak IBOutlet GPUImageView *OCRImageView;
+    __weak IBOutlet GPUImageView *previewImageView;
+    __weak IBOutlet UIButton *sendBarButtonItem;
     NSString* serverAddress;
     NSString* currentOCRResult;
     
     Boolean isSendingResult;
+    Boolean isOCRing;
+    NSLock* lock;
+    NSOperationQueue* queue;
 }
 
-- (IBAction)toggleFaceDetection:(id)sender;
 - (IBAction)showSettings:(id)sender;
-- (IBAction)handlePinchGesture:(UIGestureRecognizer *)sender;
 - (IBAction)sendResultToServer:(id)sender;
+- (IBAction)updateSliderValue:(id)sender;
+- (IBAction)toggleSwitchChange:(id)sender;
 
 @end

@@ -1,3 +1,4 @@
+
 /*
      File: main.m
  Abstract: Dmonstrates iOS 5 features of the AVCaptureStillImageOutput class

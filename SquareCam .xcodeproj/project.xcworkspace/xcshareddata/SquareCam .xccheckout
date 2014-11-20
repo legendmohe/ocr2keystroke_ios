@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6A0BFA78-0EB3-4045-9CC6-AE5D16945898</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SquareCam </string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>69FB7966-1131-4B69-B79B-55EA85A810EC</key>
+		<string>https://github.com/legendmohe/ocr2keystroke_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SquareCam .xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>69FB7966-1131-4B69-B79B-55EA85A810EC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/legendmohe/ocr2keystroke_ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>69FB7966-1131-4B69-B79B-55EA85A810EC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>69FB7966-1131-4B69-B79B-55EA85A810EC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SquareCam</string>
+		</dict>
+	</array>
+</dict>
+</plist>
